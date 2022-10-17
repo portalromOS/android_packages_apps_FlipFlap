@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 The LineageOS Project
+ * Copyright (c) 2022 The Portal Project
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -18,19 +18,24 @@
  *
  */
 
-package org.lineageos.flipflap;
+package org.portalrom.flipflap;
 
-import android.os.Bundle;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.RelativeLayout;
 
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.collapsingtoolbar.R;
+public class AlarmPanel extends RelativeLayout {
+    private static final String TAG = "AlarmPanel";
 
-public class FlipFlapSettingsActivity extends CollapsingToolbarBaseActivity {
+    public AlarmPanel(Context context) {
+        this(context, null);
+    }
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public AlarmPanel(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
 
-        getFragmentManager().beginTransaction().replace(R.id.content_frame,
-                new FlipFlapSettingsFragment()).commit();
+    public AlarmPanel(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2021 The LineageOS Project
+ * Copyright (c) 2022 The Portal Project
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -18,7 +18,7 @@
  *
  */
 
-package org.lineageos.flipflap;
+package org.portalrom.flipflap;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -53,8 +53,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import org.lineageos.internal.util.LineageLockPatternUtils;
-import lineageos.providers.LineageSettings;
+import org.portalrom.internal.util.PortalRomLockPatternUtils;
+import portalrom.providers.PortalRomSettings;
 
 public class FlipFlapView extends FrameLayout {
     private static final String TAG = "FlipFlapView";
@@ -411,30 +411,30 @@ public class FlipFlapView extends FrameLayout {
     }
 
     private boolean shouldPassToSecurityView() {
-        LineageLockPatternUtils llpu = new LineageLockPatternUtils(mContext);
+        PortalRomLockPatternUtils llpu = new PortalRomLockPatternUtils(mContext);
         return llpu.shouldPassToSecurityView(getUserId());
     }
 
     private void setPassToSecurityView(boolean enabled) {
-        LineageLockPatternUtils llpu = new LineageLockPatternUtils(mContext);
+        PortalRomLockPatternUtils llpu = new PortalRomLockPatternUtils(mContext);
         llpu.setPassToSecurityView(enabled, getUserId());
     }
 
     private void checkHighTouchSensitivity() {
         if (shouldUseHighTouchSensitivity() &&
                 FlipFlapUtils.getHighTouchSensitivitySupported(getContext())) {
-            mUserHighTouchState = LineageSettings.System.getInt(mContext.getContentResolver(),
-                    LineageSettings.System.HIGH_TOUCH_SENSITIVITY_ENABLE, 0);
-            LineageSettings.System.putInt(mContext.getContentResolver(),
-                    LineageSettings.System.HIGH_TOUCH_SENSITIVITY_ENABLE, 1);
+            mUserHighTouchState = PortalRomSettings.System.getInt(mContext.getContentResolver(),
+                    PortalRomSettings.System.HIGH_TOUCH_SENSITIVITY_ENABLE, 0);
+            PortalRomSettings.System.putInt(mContext.getContentResolver(),
+                    PortalRomSettings.System.HIGH_TOUCH_SENSITIVITY_ENABLE, 1);
         }
     }
 
     private void restoreHighTouchSensitivity() {
         if (shouldUseHighTouchSensitivity() &&
                 FlipFlapUtils.getHighTouchSensitivitySupported(getContext())) {
-            LineageSettings.System.putInt(mContext.getContentResolver(),
-                    LineageSettings.System.HIGH_TOUCH_SENSITIVITY_ENABLE, mUserHighTouchState);
+            PortalRomSettings.System.putInt(mContext.getContentResolver(),
+                    PortalRomSettings.System.HIGH_TOUCH_SENSITIVITY_ENABLE, mUserHighTouchState);
         }
     }
 

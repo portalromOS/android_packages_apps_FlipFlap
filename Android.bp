@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2021 The LineageOS Project
+// Copyright (C) 2022 The Portal Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,8 +18,8 @@ android_app {
     name: "FlipFlap",
 
     static_libs: [
-        "org.lineageos.platform.internal",
-        "org.lineageos.settings.resources",
+        "org.portalrom.platform.internal",
+        "org.portalrom.settings.resources",
     ],
 
     srcs: ["src/**/*.java"],
@@ -33,14 +33,14 @@ android_app {
         proguard_flags_files: ["proguard.flags"],
     },
 
-    required: ["privapp_whitelist_org.lineageos.flipflap.xml"],
+    required: ["privapp_whitelist_org.portalrom.flipflap.xml"],
 
 }
 
 prebuilt_etc {
-    name: "privapp_whitelist_org.lineageos.flipflap.xml",
+    name: "privapp_whitelist_org.portalrom.flipflap.xml",
 
-    src: "privapp_whitelist_org.lineageos.flipflap.xml",
+    src: "privapp_whitelist_org.portalrom.flipflap.xml",
     sub_dir: "permissions",
 
 }

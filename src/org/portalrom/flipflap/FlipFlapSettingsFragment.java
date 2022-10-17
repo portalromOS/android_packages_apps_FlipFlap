@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017-2019 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -18,7 +18,7 @@
  *
  */
 
-package org.lineageos.flipflap;
+package org.portalrom.flipflap;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -38,7 +38,7 @@ import androidx.preference.SwitchPreference;
 import com.android.settingslib.widget.MainSwitchPreference;
 import com.android.settingslib.widget.OnMainSwitchChangeListener;
 
-import org.lineageos.flipflap.R;
+import org.portalrom.flipflap.R;
 
 public class FlipFlapSettingsFragment extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener, OnMainSwitchChangeListener {

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 The LineageOS Project
+ * Copyright (c) 2022 The Portal Project
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -18,24 +18,24 @@
  *
  */
 
-package org.lineageos.flipflap;
+package org.portalrom.flipflap;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 
-public class AlarmPanel extends RelativeLayout {
-    private static final String TAG = "AlarmPanel";
+public class ClockPanel extends LinearLayout {
+    private static final String TAG = "ClockPanel";
 
-    public AlarmPanel(Context context) {
+    public ClockPanel(Context context) {
         this(context, null);
     }
 
-    public AlarmPanel(Context context, AttributeSet attrs) {
+    public ClockPanel(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public AlarmPanel(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ClockPanel(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 }

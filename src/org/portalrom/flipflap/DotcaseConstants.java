@@ -1,6 +1,5 @@
 /*
- * Copyright (c) 2016 The CyanogenMod Project
- * Copyright (c) 2017 The LineageOS Project
+ * Copyright (c) 2022 The Portal Project
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -19,7 +18,7 @@
  *
  */
 
-package org.lineageos.flipflap;
+package org.portalrom.flipflap;
 
 import android.graphics.Color;
 

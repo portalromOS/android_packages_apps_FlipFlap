@@ -1,6 +1,5 @@
 /*
- * Copyright (c) 2016 The CyanogenMod Project
- * Copyright (c) 2017-2021 The LineageOS Project
+ * Copyright (c) 2022 The Portal Project
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -19,9 +18,9 @@
  *
  */
 
-package org.lineageos.flipflap;
+package org.portalrom.flipflap;
 
-import org.lineageos.flipflap.DotcaseConstants.Notification;
+import org.portalrom.flipflap.DotcaseConstants.Notification;
 
 import android.content.Context;
 import android.content.Intent;
